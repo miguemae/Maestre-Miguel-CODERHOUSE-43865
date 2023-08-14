@@ -1,0 +1,34 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>
+        Miguel Maestre
+    </title>
+{% endblock titulo %}
+
+{% block foto_principal %}
+
+<div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'aplicacion/assets/alumno.jpg' %}" alt="miguelmaestre" width="420px"></div>
+
+{% endblock foto_principal %}
+
+{% block descripcion %}
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light">Miguel Maestre</h1>
+                    <p>Hola!.</p>
+                    <p>Mi nombre es Miguel Maestre, soy contador público, tengo 33 años y actualmente trabajo en el equipo de Tesorería de Globant!</p>
+                    <p>Además de mi experiencia contable y de tesorería, estoy emocionado de aventurarme en el mundo de la programación. Mi interés en frontend me permite combinar mi creatividad con mis habilidades técnicas para crear soluciones visuales atractivas y funcionales. Mi aprendizaje de SQL y Python me ha brindado la capacidad de manipular datos de manera eficiente y automatizar procesos, lo que complementa perfectamente mi experiencia financiera.
+                    </p>
+                    <p>
+                    Aunque mi mente a menudo está ocupada con números, códigos y estados financieros, nunca subestimo el poder de una buena hamburguesa, mientras veo un partido del Club más grande de Argentina!.
+                    </p>
+                    <br>
+                    <center>
+                    <h3>El <a class="text-primary">Club Atl</a><a class="text-warning">ético B</a><a class="text-primary">oca Juniors</a></h3>
+                    <a href="https://www.linkedin.com/in/miguel-maestre-030a0297/" target="blank" rel="noreferrer noopener"> 
+                        <img src="{% static 'aplicacion/assets/linkedin.png' %}" alt="Linkedin" width="50px"> 
+                    </a>
+                    </center>
+                </div>
+{% endblock descripcion %}

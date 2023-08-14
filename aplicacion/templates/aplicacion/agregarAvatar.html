@@ -1,0 +1,30 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>
+        avatar
+    </title>
+{% endblock titulo %}
+
+{% block foto_principal %}
+<div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'aplicacion/assets/foto_principal.jpg' %}" alt="fotolibros" />
+</div>
+{% endblock foto_principal %}
+
+{% block descripcion %}
+
+    <div class="col-lg-5">
+    <h3>Cargar Avatar</h3>
+    <form method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Actualizar">
+    </form>
+    </div>
+
+
+
+{% endblock descripcion %}

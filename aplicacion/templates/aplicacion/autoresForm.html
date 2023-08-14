@@ -16,13 +16,11 @@
                     <h1 class="font-weight-light">Ingrese Nuevo Autor</h1>
                     <form action="" method="POST" class="col-lg-5">
                         {% csrf_token %}
-                        <strong>
-                        <p> Nombre del Autor : <input type="text" name="nombre" id="nombre"></p>
-                        <p> Apellido : <input type="text" name="apellido" id="apellido"></p>
-                        <br>
-                        </strong>
-                        <input type="submit" value="Enviar">
-                    </form>
+                           <table>
+                            {{ form.as_table }}
+                           </table>
+                           <input type="submit" value="Enviar">
+                        </form>
                 </div>
 {% endblock descripcion %}
 

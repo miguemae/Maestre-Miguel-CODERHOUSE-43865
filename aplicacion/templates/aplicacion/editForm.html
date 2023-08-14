@@ -1,0 +1,33 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>
+        Editar User
+    </title>
+{% endblock titulo %}
+
+{% block foto_principal %}
+<div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'aplicacion/assets/editarUser.jpeg' %}" alt="a" /></div>
+{% endblock foto_principal %}
+
+{% block descripcion %}
+
+<div class="center col-lg-7">
+    <h1 class="font-weight-light">Edita tus Datos!</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+       </table>
+       <br>
+       <button type="submit">Actualizar Datos</button>
+    </form>
+
+    <br>
+
+    {% if user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'agregarAvatar' %}">Edita/Crea tu Avatar</a>
+    {% endif %}
+</div>
+{% endblock descripcion %}

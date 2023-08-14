@@ -1,0 +1,32 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>
+        Login!
+    </title>
+{% endblock titulo %}
+
+{% block foto_principal %}
+<div class="col-lg-3"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'aplicacion/assets/puertalibreria.jpg' %}" alt="a" /></div>
+{% endblock foto_principal %}
+
+{% block descripcion %}
+    {% if mensaje %}
+    <h4>
+        <p style="color:red" align="center">
+        {{ mensaje }}
+        </p>
+    </h4>
+    {% endif %}
+    <div class="col-lg-5">
+        <form action="" method="POST" class="col-lg-3">
+            {% csrf_token %}
+               <table>
+                {{ form.as_table }}
+               </table>
+               <br>
+               <button type="submit">Iniciar Sesión</button>
+            </form>
+    </div>
+{% endblock descripcion %}

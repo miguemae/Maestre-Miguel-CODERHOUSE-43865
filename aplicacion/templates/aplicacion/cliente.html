@@ -47,7 +47,9 @@
     {% endblock descripcion %}
 {% block contenido %}
     <center>
-        <h2>¿CLIENTE NUEVO?</h2>
+        {% if user.is_authenticated %}
+        <h2>Contrata una de nuestras Membresías!</h2>
         <a class="btn btn-primary" href="{% url 'clienteForm' %}">Registrate</a>
+        {% endif %}
     </center>
 {% endblock contenido %}

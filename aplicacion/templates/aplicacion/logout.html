@@ -1,0 +1,22 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>
+        Logout!
+    </title>
+{% endblock titulo %}
+
+{% block foto_principal %}
+<div class="col-lg-4"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'aplicacion/assets/gracias.png' %}" alt="a" /></div>
+{% endblock foto_principal %}
+
+{% block descripcion %}
+    <div class="col-lg-5">
+    <h4>
+        <p style="color:red" align="center">
+        Gracias por su visita!
+        </p>
+    </h4>
+    </div>
+{% endblock descripcion %}

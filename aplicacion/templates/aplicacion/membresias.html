@@ -17,7 +17,9 @@
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">Membresías</h1>
                     <p>Consulta por nuestros planes de membresías, accede a un mundo de posibilidades con nosotros rentando e incluso comprando con increíbles descuentos y promociones!.</p>
+                    {% if user.is_authenticated %}
                     <a class="btn btn-primary" href="{% url 'cliente' %}">Contáctanos para saber más sobre Membresías</a>
+                    {% endif %}
                 </div>
 {% endblock descripcion %}
 
